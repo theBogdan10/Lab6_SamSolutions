@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=PT+Serif&display=swap" rel="stylesheet">    <title>Document</title>
+<body>
+    <div class="container">
+        <form>
+        <h1>Оставьте свой отзыв</h1>
+        <h4>Помогите нашим отелям стать лучше! Оставьте отзыв о них,<br>
+            а также о посещенных  вами достопримечательностях</h2>
+            
+            <div class="start">
+        
+            <form>
+            <h3 style="text-align: left;">Вашe общее впечатление:</h3>
+                <input type="radio" id="positiv"
+                 name="contact" value="email">
+                <label for="positiv">Скорее положительное</label><br>
+            
+                <input type="radio" id="negativ"
+                 name="contact" value="phone">
+                <label for="negativ">Скорее отрицательное</label><br>
+            
+                <input type="radio" id="noans"
+                 name="contact" value="mail">
+                <label for="noans">Затрудняюсь ответить</label>
+            </form>
+            <div>
+                    <form>
+                        <h3>Представтесь</h3>
+                        <label for="name">Имя*: </label>
+                        <input type="text" id="name1" required name="name">
+                        <label for="surname">Фамилия*: </label>
+                        <input type="text" id="surname" required>
+                        <label for="otch">Отчество*: </label>
+                        <input type="text" id="otch" required>
+                    </form>
+                </div>
+        </div>
+        
+           
+
+            <div>
+            <h3>Контактная информация</h3>
+            <form>
+                <label for="number">Телефон*:</label> 
+                <input type="text" id="mobile" placeholder="Введите телефон" pattern="[\+]\d{1}\s[\(]\d{3}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}" required > </p>
+                <label for="email">Электронная почта*: </label>
+                <input type="email" id="email"  required  placeholder="Введите e-mail"></p>
+             </form>
+             </div>
+             <form> 
+                <h3>Детали поездки</h3>
+                <label for="dateShip">Даты поездки:<br></label>
+                <input type="date" id="date">
+            </form>
+    
+            <form method="get">
+                
+            <select name="country" style="margin-top: 20px;" id="country" >
+                <option>Выберите страну</option>
+                <option value="Беларусь">Беларусь</option>
+                <option value="Италия">Италия</option>
+                <option value="Эстония ">Эстония</option> 
+            </select>
+            </form>
+            <div>
+                   
+            </div>
+            <form method="get">
+                <p><input type="checkbox" id="mount" checked>Гора лысая</p>
+                <p><input type="checkbox" id="library">Национальная библиотека</p>
+                <p><input type="checkbox" id="zoo">Гродгненский зоопарк</p>
+    
+            </form>
+    
+            <h3>Оцените качество услуг гида</h3>
+            <form  method="get">
+                <div class="slidecontainer">
+                    <input type="range" min="1" max="100" value="50" class="slider" id="myRange" >
+                    <p>Value: <span id="demo"></span></p>
+                  </div>
+                  
+                <p><input type="checkbox" name="lang1">На языке посещенной страницы</p>
+            </form>
+    
+            <h3>Галерея</h3>
+            <form method="get">
+                <p><input type="file" id="the-file-input" accept="image/*" onchange='openFile(event)'  multiple>
+                <div class="img1">
+                <img id='output'>
+                </div>
+                </form>
+                
+            
+            
+            <div class="lines">
+            <h3><hr align="left" class="l1">Опишите свои эмоции:</h3>
+            </div>
+            <textarea name="comment" cols="40" rows="6" id="area"></textarea>
+    
+           
+            <div>
+            <input type="submit" id="otprav" name="send" onsubmit="valid(this)">
+            <div id="myModal" class="modal">
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <div class="modal-header">
+                            <span id="n1"></span>
+                            <h3>Суммарная информация</h3>
+                        </div>
+                        <div class=modal-body>
+                            <p><b>Контакты </b><span id="n2"></span></p>
+                            <p><b>Даты поездки </b><span id="n3"></span></p>
+                            <p><b>Страна визита </b><span id="n4"></span></p>
+                            <p><b>Посещенные<br>достопримечательности</b> <span id="n5"></span></p>
+                            <p><b>Оценка гида </b><span id="n6"></span></p>
+                            <p><b>Эмоции от поезки </b><span id="n7"></span></p>
+                        </div>
+                        <div class="model-footer">
+                            <button id="close_m">Закрыть окно</button>       
+                        </div>
+                    </div>
+                  </div>
+            </div>
+
+            
+
+
+
+    </form>
+    </div>
+<script src="script.js"></script>
+
+
+
+</body>
+</html> 
